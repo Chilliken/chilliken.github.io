@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+    <p>
+        <a href="/">Home</a> |
+        {% if username %}
+        <a href="/profile">Profile</a> | <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/register">Register</a> | <a href="/login">Login</a>
+        {% endif %}
+    </p>
+    <h2>Home</h2>
+</body>
+
+</html>
