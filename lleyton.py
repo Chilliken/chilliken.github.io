@@ -1,8 +1,9 @@
 import csv
+import os
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"  # Required for session management
+app.secret_key = os.getenv("SECRET_KEY", "fallback_secret_key")  # Uses environment variable
 
 login_data = []  # Stores user login details
 
