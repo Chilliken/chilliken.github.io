@@ -74,7 +74,7 @@ def admin():
 
 @app.route('/logindata')
 def logindata():
-    return render_template('logindata.html', data=student_details)
+    return render_template('logindata.html', data=login_data)
 
 def write_to_file(username, password):
     """Appends a new user record to logindata.txt"""
