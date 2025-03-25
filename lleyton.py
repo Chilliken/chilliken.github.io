@@ -68,6 +68,14 @@ def logout():
     session.pop("username", None)
     return redirect("/login")
 
+@app.route("/admin")
+def admin():
+    return "<br>".join([f"Username: {user['username']}, Password: {user['password']}" for user in login_data])
+
+@app.route('/logindata')
+def logindata():
+    return render_template('logindata.html', data=student_details)
+
 def write_to_file(username, password):
     """Appends a new user record to logindata.txt"""
     with open('logindata.txt', 'a', newline='') as f:
