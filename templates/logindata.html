@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Login Data</title>
+	</head>
+	<body>
+		<p>
+			<a href = "/"> Home</a> | <a href = "/admin"> Register</a> | <a href = "/logindata"> Student List</a>
+		</p>
+		<h2> Login Data</h2>
+		<table border="1">
+			<tr>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+			{% for rec in data %}
+			<tr>
+				<td>{{rec['username']}}</td>
+				<td>{{rec['password']}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+	
+
+</html>
